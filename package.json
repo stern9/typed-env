@@ -1,0 +1,54 @@
+{
+	"name": "@stern9/typed-env",
+	"version": "0.1.0",
+	"description": "Validate environment variables against a schema and get a fully typed config object",
+	"keywords": [
+		"env",
+		"environment",
+		"config",
+		"validation",
+		"typescript"
+	],
+	"license": "MIT",
+	"author": "stern9",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/stern9/typed-env.git"
+	},
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"sideEffects": false,
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.build.json",
+		"typecheck": "tsc",
+		"lint": "biome check .",
+		"format": "biome check --write .",
+		"test": "vitest run",
+		"check": "pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build"
+	},
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": "12.11.2",
+			"onFail": "download"
+		}
+	},
+	"packageManager": "pnpm@12.11.2",
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.15",
+		"@types/node": "^26.6.5",
+		"typescript": "^7.0.2",
+		"vitest": "^5.0.3"
+	}
+}
