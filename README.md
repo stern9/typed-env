@@ -41,15 +41,12 @@ EnvError: Invalid environment variables:
 
 ## Install
 
-Not on npm yet. The library is a single file with no dependencies, so you can
-copy [`src/index.ts`](src/index.ts) into your project, or build it locally:
-
 ```sh
-git clone https://github.com/stern9/typed-env
-cd typed-env
-pnpm install
-pnpm run build
+npm install @stern9/typed-env
 ```
+
+The library is a single file with no dependencies, so you can also copy
+[`src/index.ts`](src/index.ts) straight into your project.
 
 ## Validators
 
